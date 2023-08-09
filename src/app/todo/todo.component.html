@@ -1,0 +1,15 @@
+<br>
+<br>
+<div class=" card mx-auto" style="width: 50%;">
+<div class="container mt-5">
+    <h1>To-Do List</h1>
+    <input type="text" class="form-control" placeholder="Enter a new task" [(ngModel)]="newTask">
+    <button class="btn btn-primary mt-2" (click)="addTask()">Add Task</button>
+    <ul class="list-group mt-3">
+      <li class="list-group-item" *ngFor="let task of tasks; let i = index">
+        {{ task }}
+        <button class="btn btn-danger btn-sm float-right" (click)="removeTask(i)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>
